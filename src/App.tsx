@@ -1,24 +1,32 @@
 import React from 'react';
 
 import './App.css';
+import MyCard from './Components/MyCard/MyCard';
 import Prueba from './Components/Prueba/Prueba';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <Prueba title={'Título de prueba'}>
-          <p>Texto children!!</p>
-        </Prueba>
-<br />
-        <Prueba>
-          <p>Texto children con default prop!!</p>
-        </Prueba>
+    <>
+      <div className="padding flex-row">
 
-      </header>
+          <Prueba title={'Título de prueba'}>
+            <p>Texto children!!</p>
+          </Prueba>
 
-    </div>
+          <Prueba>
+            <p>Texto children con default prop!!</p>
+          </Prueba>
+
+          <Prueba title={'Tarjeta'}>
+            <p>Sigo probando ...</p>
+          </Prueba>
+
+      </div>
+
+      <div className="padding flex-row">
+        <MyCard></MyCard>
+      </div>
+    </>
   );
 }
 

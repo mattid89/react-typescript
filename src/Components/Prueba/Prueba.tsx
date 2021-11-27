@@ -1,6 +1,8 @@
 import React, { ReactNode, useState } from 'react'
+import { Button } from '@mui/material'
 import PropTypes from 'prop-types'
 import './Prueba.css'
+
 
 const Prueba = ({ title, children }: { title: string, children: ReactNode }) => {
 
@@ -8,15 +10,14 @@ const Prueba = ({ title, children }: { title: string, children: ReactNode }) => 
     
     const [numero, setNumero] = useState(INITIAL_STATE)
     
-
     const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => setNumero(numero + 1)
 
     return (
-        <>
+        <div className="flex-column padding">
           <h4>{title}</h4>  
           <div>{children}</div>
-          <button id="one" onClick={ (event) => handleClick(event) }>Apretar {numero}</button>
-        </>
+          <Button onClick={(event) => handleClick(event)} variant="contained">Apretar {numero}</Button>
+        </div>
     )
 }
 
