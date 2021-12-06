@@ -20,7 +20,7 @@ const MyCard = ({ title, subtitle }: { title: string, subtitle: string }) => {
                         onClick={(event) => handleClick(event)} 
                         variant="contained"
                         >Apretar {numero} 
-                        </Button>
+                  </Button>
                         {/* <svg data-testid="AccessibilityOutlinedIcon"></svg> */}
             </div>
       )
