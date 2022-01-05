@@ -23,9 +23,9 @@ function App() {
 
       </div>
 
-      <div className="padding flex-row">
+      {/* <div className="padding flex-row">
         <MyCard></MyCard>
-      </div>
+      </div> */}
     </>
   );
 }
