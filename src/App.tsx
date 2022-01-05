@@ -1,8 +1,6 @@
 import React from 'react';
-
-import './App.css';
-import MyCard from './Components/MyCard/MyCard';
 import Prueba from './Components/Prueba/Prueba';
+import './App.css';
 
 function App() {
   return (
@@ -13,13 +11,13 @@ function App() {
             <p>Texto children!!</p>
           </Prueba>
 
-          <Prueba>
+          {/* <Prueba>
             <p>Texto children con default prop!!</p>
           </Prueba>
 
           <Prueba title={'Tarjeta'}>
             <p>Sigo probando ...</p>
-          </Prueba>
+          </Prueba> */}
 
       </div>
 
