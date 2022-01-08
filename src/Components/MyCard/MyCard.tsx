@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { Button, Card, CardActions, CardContent, Typography } from '@mui/material'
-import useCounter from '../../Hooks/UseCounter'
+import useCounter from 'src/Hooks/UseCounter'
 // import AccessibilityOutlinedIcon from '@mui/icons-material/AccessibilityOutlined';
 
 const MyCard = ({ title, subtitle }: { title: string, subtitle: string }) => {

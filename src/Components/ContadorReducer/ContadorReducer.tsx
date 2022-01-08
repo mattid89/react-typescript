@@ -1,6 +1,6 @@
 import { Alert, Box, Button, TextField } from "@mui/material"
 import { useState } from "react"
-import useCounterReducer from "../../Hooks/UseCounterReducer"
+import useCounterReducer from "src/Hooks/UseCounterReducer"
 
 
 const ContadorReducer = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ContadorReducer from './Components/ContadorReducer/ContadorReducer';
+import ContadorReducer from 'src/Components/ContadorReducer/ContadorReducer';
 
 function App() {
     return (
