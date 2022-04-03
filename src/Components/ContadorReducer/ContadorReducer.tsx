@@ -8,7 +8,7 @@ const ContadorReducer = () => {
       const [valor, setValor] = useState('0')
 
       return (
-            <div>
+            <div className="oneRemMargin">
                   <Alert severity="success">Contador: {state.contador}</Alert>
                   <Button variant="outlined" onClick={() => dispatch({ type: 'increment', payload: 0 })}>+</Button>
                   <Button variant="outlined" onClick={() => dispatch({ type: 'decrement', payload: 0 })}>-</Button>
@@ -20,6 +20,7 @@ const ContadorReducer = () => {
                               value={valor}
                               id="filled-basic" 
                               label="to set" 
+                              color="warning"
                               variant="filled" 
                               type="text"
                         />

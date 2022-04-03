@@ -6,7 +6,7 @@ function App() {
     return (
         <>
 
-            <div className="padding flex-row">
+            <div className="flex-row">
 
                 <ContadorReducer />
                 <ContadorReducer />
