@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ContadorReducer from 'src/Components/ContadorReducer/ContadorReducer';
+import ButtonHttpRequest from './Components/button-http-request/button-http-request';
 
 function App() {
     return (
@@ -10,6 +11,8 @@ function App() {
 
                 <ContadorReducer />
                 <ContadorReducer />
+
+                <ButtonHttpRequest />
 
                 {/* <Prueba title={'Título de prueba'}>
                     <p>Texto children!!</p>
