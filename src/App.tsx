@@ -1,20 +1,20 @@
-import React from 'react';
-import './App.css';
-import ContadorReducer from 'src/Components/ContadorReducer/ContadorReducer';
-import ButtonHttpRequest from './Components/button-http-request/button-http-request';
+import React from "react";
+import "./App.css";
+import ContadorReducer from "src/Components/ContadorReducer/ContadorReducer";
+import ButtonHttpRequest from "./Components/ButtonHttpRequest/ButtonHttpRequest";
+import CustomSnack from "./Components/CustomSnack/CustomSnack";
 
-function App() {
-    return (
-        <>
+const App = () => {
+  return (
+    <>
+      <CustomSnack />
+      <div className="flex-row">
+        <ContadorReducer />
+        <ContadorReducer />
 
-            <div className="flex-row">
+        <ButtonHttpRequest />
 
-                <ContadorReducer />
-                <ContadorReducer />
-
-                <ButtonHttpRequest />
-
-                {/* <Prueba title={'Título de prueba'}>
+        {/* <Prueba title={'Título de prueba'}>
                     <p>Texto children!!</p>
                     </Prueba>
 
@@ -26,16 +26,15 @@ function App() {
                     <p>Sigo probando ...</p>
                     </Prueba> 
                 */}
+      </div>
 
-            </div>
-
-            {/* 
+      {/* 
                 <div className="padding flex-row">
                     <MyCard></MyCard>
                 </div> 
             */}
-        </>
-    );
-}
+    </>
+  );
+};
 
 export default App;
