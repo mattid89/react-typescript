@@ -10,7 +10,6 @@ const App = () => {
       <CustomSnack />
       <div className="flex-row">
         <ContadorReducer />
-        <ContadorReducer />
 
         <ButtonHttpRequest />
 

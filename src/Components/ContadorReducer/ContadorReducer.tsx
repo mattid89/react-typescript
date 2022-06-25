@@ -1,15 +1,12 @@
 import { Alert, Box, Button, TextField } from "@mui/material"
 import { useState } from "react"
 import useCounterReducer from "src/Hooks/UseCounterReducer"
-import { showSnack } from "src/Services/Snackbar.service"
-
 
 const ContadorReducer = () => {
       const [state, dispatch] = useCounterReducer()
       const [valor, setValor] = useState('0')
 
       const handleSet = () => {
-            showSnack(`Seteo el valor del contador a ${parseInt(valor)}`);
             dispatch({ type: "set", payload: parseInt(valor) });
       }
 

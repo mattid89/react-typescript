@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { showSnack } from 'src/Services/Snackbar.service';
 
 function ButtonHttpRequest() {
 
@@ -15,7 +14,6 @@ function ButtonHttpRequest() {
                   })
                   
                   setData(response?.data?.contents?.quotes[0]?.quote)
-                  showSnack("El servicio de Quotes respondio OK")
             } catch (error) {
                   console.log(error)
             }
