@@ -1,17 +1,15 @@
 import React from "react";
 import "./App.css";
-import ContadorReducer from "src/Components/ContadorReducer/ContadorReducer";
-import ButtonHttpRequest from "./Components/ButtonHttpRequest/ButtonHttpRequest";
-import CustomSnack from "./Components/CustomSnack/CustomSnack";
+import Formulario from "./Components/Form";
 
 const App = () => {
   return (
     <>
-      <CustomSnack />
-      <div className="flex-row">
-        <ContadorReducer />
+    <div className="flex-column">
 
-        <ButtonHttpRequest />
+      <div className="flex-row">
+        {/* <ContadorReducer />
+        <ButtonHttpRequest /> */}
 
         {/* <Prueba title={'Título de prueba'}>
                     <p>Texto children!!</p>
@@ -26,6 +24,11 @@ const App = () => {
                     </Prueba> 
                 */}
       </div>
+
+      <div className="flex-row">
+        <Formulario />
+      </div>
+    </div>
 
       {/* 
                 <div className="padding flex-row">
