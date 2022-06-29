@@ -3,6 +3,8 @@ import { useObservableSubscription } from "src/Hooks/UseObservableSubscription";
 import { ToastData } from "src/Models/ToastData";
 import SnackbarService from "src/Services/SnackbarService";
 
+// TODO: Implementar rxjs y contexto de esta manera
+// https://github.com/redbee-academy/fe-react/tree/master/src/auth
 
 export const SnackbarContext = createContext<SnackbarService | undefined>(undefined);
 
