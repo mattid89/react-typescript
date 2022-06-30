@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { FormularioData } from "src/Models/FormularioData";
 
-const useFormulario = (inicial: any) => {
-  const [formulario, setFormulario] = useState(inicial);
+const useFormulario = (inicial: FormularioData): any => {
+  const [formulario, setFormulario] = useState<FormularioData>(inicial);
   const handleChange = (e: any) => {
     setFormulario({
       ...formulario,

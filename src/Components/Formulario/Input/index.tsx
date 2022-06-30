@@ -1,6 +1,6 @@
 import './Input.css'
 
-const CustomInput = ({ label, ...inputAttr }: any) => {
+const Input = ({ label, ...inputAttr }: any) => {
   return (
     <div className='field'>
       <label>{label}</label>
@@ -9,4 +9,4 @@ const CustomInput = ({ label, ...inputAttr }: any) => {
   );
 };
 
-export default CustomInput
+export default Input
