@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import FormikForm from "./Components/FormikForm";
 import Formulario from "./Components/Formulario";
 
 const App = () => {
@@ -10,31 +11,14 @@ const App = () => {
       <div className="flex-row">
         {/* <ContadorReducer />
         <ButtonHttpRequest /> */}
-
-        {/* <Prueba title={'Título de prueba'}>
-                    <p>Texto children!!</p>
-                    </Prueba>
-
-                    <Prueba>
-                    <p>Texto children con default prop!!</p>
-                    </Prueba>
-
-                    <Prueba title={'Tarjeta'}>
-                    <p>Sigo probando ...</p>
-                    </Prueba> 
-                */}
+        <FormikForm />
       </div>
-
+        <hr />
       <div className="flex-row">
         <Formulario />
       </div>
     </div>
 
-      {/* 
-                <div className="padding flex-row">
-                    <MyCard></MyCard>
-                </div> 
-            */}
     </>
   );
 };
