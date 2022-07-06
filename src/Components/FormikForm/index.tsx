@@ -24,6 +24,12 @@ const FormikForm = () => {
       errors.lastname = "El apellido es muy corto";
     }
 
+    if (!values.email) {
+      errors.email = "Requerido";
+    } else if (values.email.length < 5) {
+      errors.email = "El email es muy corto";
+    }
+
     return errors;
   };
 
@@ -42,26 +48,36 @@ const FormikForm = () => {
         type="text"
         name="name"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.name}
       />
-      {formik.errors.name ? <small>{formik.errors.name}</small> : null}
+      {formik.touched.name && formik.errors.name ? (
+        <small>{formik.errors.name}</small>
+      ) : null}
 
       <label>Apellido</label>
       <input
         type="text"
         name="lastname"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.lastname}
       />
-      {formik.errors.lastname ? <small>{formik.errors.lastname}</small> : null}
+      {formik.touched.lastname && formik.errors.lastname ? (
+        <small>{formik.errors.lastname}</small>
+      ) : null}
 
       <label>Email</label>
       <input
         type="email"
         name="email"
         onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
         value={formik.values.email}
       />
+      {formik.touched.email && formik.errors.email ? (
+        <small>{formik.errors.email}</small>
+      ) : null}
 
       <Button type="submit" size="large" variant="contained">
         Enviar
