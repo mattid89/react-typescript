@@ -15,3 +15,7 @@
 .oneRemMargin {
       margin: 1rem;
 }
+
+.space-around {
+      justify-content: space-around;
+}

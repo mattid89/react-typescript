@@ -13,7 +13,7 @@ const Formulario = () => {
   }
   
   return (
-    <div className="flex-column">
+    <div className="flex-column padding">
       <UserForm submit={submit} />
       <hr />
       <ul>

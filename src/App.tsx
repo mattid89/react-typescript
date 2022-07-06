@@ -1,24 +1,21 @@
-import React from "react";
 import "./App.css";
 import FormikForm from "./Components/FormikForm";
-import Formulario from "./Components/Formulario";
+// import Formulario from "./Components/Formulario";
 
 const App = () => {
   return (
     <>
-    <div className="flex-column">
-
-      <div className="flex-row">
-        {/* <ContadorReducer />
-        <ButtonHttpRequest /> */}
-        <FormikForm />
-      </div>
+      <div className="flex-column">
+        {/* <div className="flex-row">
+          <ContadorReducer />
+          <ButtonHttpRequest />
+        </div> */}
         <hr />
-      <div className="flex-row">
-        <Formulario />
+        <div className="flex-row pad-children">
+          <FormikForm />
+          {/* <Formulario /> */}
+        </div>
       </div>
-    </div>
-
     </>
   );
 };
