@@ -46,10 +46,11 @@ const FormikForm = () => {
       <label>Nombre</label>
       <input
         type="text"
-        name="name"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.name}
+        {...formik.getFieldProps("name")}
+        // name="name"
+        // onChange={formik.handleChange}
+        // onBlur={formik.handleBlur}
+        // value={formik.values.name}
       />
       {formik.touched.name && formik.errors.name ? (
         <small>{formik.errors.name}</small>
@@ -58,10 +59,11 @@ const FormikForm = () => {
       <label>Apellido</label>
       <input
         type="text"
-        name="lastname"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.lastname}
+        {...formik.getFieldProps("lastname")}
+        // name="lastname"
+        // onChange={formik.handleChange}
+        // onBlur={formik.handleBlur}
+        // value={formik.values.lastname}
       />
       {formik.touched.lastname && formik.errors.lastname ? (
         <small>{formik.errors.lastname}</small>
@@ -70,10 +72,11 @@ const FormikForm = () => {
       <label>Email</label>
       <input
         type="email"
-        name="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
+        {...formik.getFieldProps("email")}
+        // name="email"
+        // onChange={formik.handleChange}
+        // onBlur={formik.handleBlur}
+        // value={formik.values.email}
       />
       {formik.touched.email && formik.errors.email ? (
         <small>{formik.errors.email}</small>
