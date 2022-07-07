@@ -1,5 +1,6 @@
 import "./App.css";
-import FormikForm from "./Components/FormikForm";
+import FormikComponentForm from "./Components/FormikComponentForm";
+// import FormikForm from "./Components/FormikForm";
 // import Formulario from "./Components/Formulario";
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
         </div> */}
         <hr />
         <div className="flex-row pad-children">
-          <FormikForm />
+          <FormikComponentForm />
+          {/* <FormikForm /> */}
           {/* <Formulario /> */}
         </div>
       </div>
