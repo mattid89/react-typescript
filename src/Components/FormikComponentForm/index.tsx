@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
-import { useFormik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import TextInput from "./TextInput";
 
 const FormikComponentForm = () => {
   const initialValue: FormData = {
@@ -34,57 +35,39 @@ const FormikComponentForm = () => {
 
   const handleSubmit = (value: any) => console.log(value);
 
-  const formik = useFormik({
-    initialValues: initialValue,
-    validate: handleValidate,
-    onSubmit: handleSubmit,
-  });
-
   return (
-    <form onSubmit={formik.handleSubmit} className="flex-column padding">
-      <label>Nombre</label>
-      <input
-        type="text"
-        {...formik.getFieldProps("name")}
-        // name="name"
-        // onChange={formik.handleChange}
-        // onBlur={formik.handleBlur}
-        // value={formik.values.name}
-      />
-      {formik.touched.name && formik.errors.name ? (
-        <small>{formik.errors.name}</small>
-      ) : null}
+    <Formik
+      initialValues={initialValue}
+      onSubmit={handleSubmit}
+      validate={handleValidate}
+    >
+      <Form className="flex-column padding">
+        {/* COMPONENTE CUSTOM CONECTADO CON FORMIK => Me permite también manejar los estilos de los componentes */}
+        <TextInput name="name" label="Nombre" />
 
-      <label>Apellido</label>
-      <input
-        type="text"
-        {...formik.getFieldProps("lastname")}
-        // name="lastname"
-        // onChange={formik.handleChange}
-        // onBlur={formik.handleBlur}
-        // value={formik.values.lastname}
-      />
-      {formik.touched.lastname && formik.errors.lastname ? (
-        <small>{formik.errors.lastname}</small>
-      ) : null}
+        <br />
 
-      <label>Email</label>
-      <input
-        type="email"
-        {...formik.getFieldProps("email")}
-        // name="email"
-        // onChange={formik.handleChange}
-        // onBlur={formik.handleBlur}
-        // value={formik.values.email}
-      />
-      {formik.touched.email && formik.errors.email ? (
-        <small>{formik.errors.email}</small>
-      ) : null}
+        {/* <label>Nombre</label>
+        <Field name="name" type="text" />
+        <Field name="select" as="select" className="input">
+          <option value="opcion1">Opcion 1</option>
+          <option value="opcion2">Opcion 2</option>
+        </Field>
+        <ErrorMessage name="name" /> */}
 
-      <Button type="submit" size="large" variant="contained">
-        Enviar
-      </Button>
-    </form>
+        <label>Apellido</label>
+        <Field name="lastname" type="text" />
+        <ErrorMessage name="lastname" />
+
+        <label>Email</label>
+        <Field name="email" type="email" />
+        <ErrorMessage name="email" />
+
+        <Button type="submit" size="large" variant="contained">
+          Enviar
+        </Button>
+      </Form>
+    </Formik>
   );
 };
 
