@@ -1,3 +1,4 @@
+import CheckBox from "./Checkbox"
 import { Button } from "@mui/material";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextInput from "./TextInput";
@@ -42,8 +43,9 @@ const FormikComponentForm = () => {
       validate={handleValidate}
     >
       <Form className="flex-column padding">
-        {/* COMPONENTE CUSTOM CONECTADO CON FORMIK => Me permite también manejar los estilos de los componentes */}
+        {/* Custom Fields */}
         <TextInput name="name" label="Nombre" />
+        <CheckBox name="accept"> Aceptar términos y condiciones</CheckBox>
 
         <br />
 
