@@ -91,8 +91,6 @@ const FormikForm = () => {
 
 export default FormikForm
 
-// TODO: Video 87
-
 interface FormData {
   name: string,
   lastname: string,
