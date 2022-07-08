@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FormularioData } from "src/Models/FormularioData";
-import UserForm from "./userForm";
+import UserForm from "./Components/userForm";
 
 const Formulario = () => {
   const [usuarios, setUsuarios] = useState<FormularioData[]>([])

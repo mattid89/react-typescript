@@ -1,9 +1,9 @@
-import CheckBox from "./Checkbox"
+import CheckBox from "./Components/Checkbox"
 import { Button } from "@mui/material";
 import { Formik, Form, ErrorMessage } from "formik";
-import TextInput from "./TextInput";
-import Select from "./Select";
-import RadioButton from "./RadioButton";
+import TextInput from "./Components/TextInput";
+import Select from "./Components/Select";
+import RadioButton from "./Components/RadioButton";
 
 const FormikComponentForm = () => {
   const initialValue: FormData = {
