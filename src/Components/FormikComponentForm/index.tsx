@@ -1,14 +1,18 @@
 import CheckBox from "./Checkbox"
 import { Button } from "@mui/material";
-import { Formik, Form } from "formik";
+import { Formik, Form, ErrorMessage } from "formik";
 import TextInput from "./TextInput";
 import Select from "./Select";
+import RadioButton from "./RadioButton";
 
 const FormikComponentForm = () => {
   const initialValue: FormData = {
-    name: "",
-    lastname: "",
-    email: "",
+    name: '',
+    lastname: '',
+    email: '',
+    sexo: '',
+    subscripciones: '',
+    accept: false
   };
 
   const handleValidate = (values: any) => {
@@ -30,6 +34,14 @@ const FormikComponentForm = () => {
       errors.email = "Requerido";
     } else if (values.email.length < 5) {
       errors.email = "El email es muy corto";
+    }
+
+    if (values.sexo === '') {
+      errors.sexo = "Requerido";
+    }
+
+    if (values.subscripciones === "") {
+      errors.subscripciones = "Requerido";
     }
 
     return errors;
@@ -54,6 +66,14 @@ const FormikComponentForm = () => {
           <option value="femenino">Femenino</option>
           <option value="niidea">Ni idea</option>
         </Select>
+        <span className="mg05rem">
+          <label>Newsletter</label>
+          <RadioButton name="subscripciones" label="No quiero recibir nada" value="no" />
+          <RadioButton name="subscripciones" label="Semanalmente" value="semanal" />
+          <RadioButton name="subscripciones" label="Diariamente" value="diario" />
+          <RadioButton name="subscripciones" label="Solo novedades de verdad" value="news" />
+          <ErrorMessage name="subscripciones" />
+        </span>
         <CheckBox name="accept"> Aceptar términos y condiciones</CheckBox>
 
         <hr />
@@ -89,4 +109,7 @@ interface FormData {
   name: string;
   lastname: string;
   email: string;
+  sexo: string;
+  subscripciones: string;
+  accept: boolean;
 }
