@@ -8,11 +8,11 @@ const App = () => {
     <>
       <div className="flex-column">
         {/* <div className="flex-row">
-          <ContadorReducer />
+          <ContadorReduced />
           <ButtonHttpRequest />
         </div> */}
         <hr />
-        <div className="flex-row pad-children">
+        <div className="flex-row">
           <FormikComponentForm />
           {/* <FormikForm /> */}
           {/* <Formulario /> */}

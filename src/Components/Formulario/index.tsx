@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormularioData } from "src/Models/FormularioData";
+import { FormularioData } from "src/Components/Formulario/Models/FormularioData";
 import UserForm from "./Components/userForm";
 
 const Formulario = () => {

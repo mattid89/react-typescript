@@ -3,7 +3,7 @@ import { useState } from "react"
 import useCounterReducer from "./Hooks/UseCounterReducer"
 
 
-const ContadorReducer = () => {
+const ContadorReduced = () => {
       const [state, dispatch] = useCounterReducer()
       const [valor, setValor] = useState('0')
 
@@ -33,4 +33,4 @@ const ContadorReducer = () => {
       )
 }
 
-export default ContadorReducer
+export default ContadorReduced

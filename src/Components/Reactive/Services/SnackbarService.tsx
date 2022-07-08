@@ -1,5 +1,5 @@
 import { BehaviorSubject } from "rxjs";
-import { ToastData } from "src/Models/ToastData";
+import { ToastData } from "../models/ToastData";
 
 class SnackbarService {
   snackbarSubject = new BehaviorSubject<ToastData>({

@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
-import { useObservableSubscription } from "src/Hooks/UseObservableSubscription";
-import { ToastData } from "src/Models/ToastData";
-import SnackbarService from "src/Services/SnackbarService";
+import SnackbarService from "src/Components/Reactive/Services/SnackbarService";
+import { useObservableSubscription } from "../Hooks/UseObservableSubscription";
+import { ToastData } from "../models/ToastData";
 
 // TODO: Implementar rxjs y contexto de esta manera
 // https://github.com/redbee-academy/fe-react/tree/master/src/auth
