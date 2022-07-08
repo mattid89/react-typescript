@@ -1,7 +1,8 @@
 import CheckBox from "./Checkbox"
 import { Button } from "@mui/material";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import TextInput from "./TextInput";
+import Select from "./Select";
 
 const FormikComponentForm = () => {
   const initialValue: FormData = {
@@ -45,9 +46,17 @@ const FormikComponentForm = () => {
       <Form className="flex-column padding">
         {/* Custom Fields */}
         <TextInput name="name" label="Nombre" />
+        <TextInput name="lastname" label="Apellido" />
+        <TextInput name="email" label="Email" type="email" />
+        <Select name="sexo" label="Sexo">
+          <option value="">Seleccione Sexo</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+          <option value="niidea">Ni idea</option>
+        </Select>
         <CheckBox name="accept"> Aceptar términos y condiciones</CheckBox>
 
-        <br />
+        <hr />
 
         {/* <label>Nombre</label>
         <Field name="name" type="text" />
@@ -57,13 +66,13 @@ const FormikComponentForm = () => {
         </Field>
         <ErrorMessage name="name" /> */}
 
-        <label>Apellido</label>
+        {/* <label>Apellido</label>
         <Field name="lastname" type="text" />
         <ErrorMessage name="lastname" />
 
         <label>Email</label>
         <Field name="email" type="email" />
-        <ErrorMessage name="email" />
+        <ErrorMessage name="email" /> */}
 
         <Button type="submit" size="large" variant="contained">
           Enviar

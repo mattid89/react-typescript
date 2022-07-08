@@ -5,10 +5,11 @@ const Checkbox = ({ children, label, ...props }: any) => {
 
     // console.log(field, meta);
     return (
-      <div>
+      <div className="mg05rem">
         <label>
           <input type="checkbox" {...field} />
-          {meta.touched && meta.error ? <div>{meta.error}</div> : null}
+          {children}
+          {meta.touched && meta.error ? <small>{meta.error}</small> : null}
         </label>
       </div>
     );
