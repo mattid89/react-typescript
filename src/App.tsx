@@ -23,6 +23,21 @@ const App = () => {
     //   </div>
     // </>
 
+    // <div>
+    //   <label>
+    //     Elige algo
+    //     <input list="lista" />
+    //   </label>
+    //   <datalist id="lista">
+    //     <option value="lala"></option>
+    //     <option value="lele"></option>
+    //     <option value="lolo"></option>
+    //     <option value="lulu"></option>
+    //     <option value="lili"></option>
+    //     <option value="liso"></option>
+    //   </datalist>
+    // </div>
+
     <BrowserRouter>
       <UseContextApp />
     </BrowserRouter>
