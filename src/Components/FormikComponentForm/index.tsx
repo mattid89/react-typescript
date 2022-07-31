@@ -72,7 +72,7 @@ const FormikComponentForm = () => {
           <RadioButton name="subscripciones" label="Semanalmente" value="semanal" />
           <RadioButton name="subscripciones" label="Diariamente" value="diario" />
           <RadioButton name="subscripciones" label="Solo novedades de verdad" value="news" />
-          <ErrorMessage name="subscripciones" />
+          {/* <ErrorMessage name="subscripciones" /> */}
         </span>
         <CheckBox name="accept"> Aceptar términos y condiciones</CheckBox>
 
