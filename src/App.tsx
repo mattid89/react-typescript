@@ -1,8 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import FormikComponentForm from "./Components/FormikComponentForm";
-import { UseContextApp } from "./UseContextApp";
-import { BrowserRouter } from "react-router-dom";
+import ZustandApp from "./ZustandApp";
 // import FormikForm from "./Components/FormikForm";
 // import Formulario from "./Components/Formulario";
 
@@ -38,9 +37,11 @@ const App = () => {
     //   </datalist>
     // </div>
 
-    <BrowserRouter>
-      <UseContextApp />
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <UseContextApp />
+    // </BrowserRouter>
+
+    <ZustandApp />
   );
 };
 
