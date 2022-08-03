@@ -1,9 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import FormikComponentForm from "./Components/FormikComponentForm";
-import ZustandApp from "./ZustandApp";
-// import FormikForm from "./Components/FormikForm";
-// import Formulario from "./Components/Formulario";
+import { BrowserRouter } from "react-router-dom";
+import { UseContextApp } from "./UseContextApp";
 
 const App = () => {
   return (
@@ -37,11 +35,11 @@ const App = () => {
     //   </datalist>
     // </div>
 
-    // <BrowserRouter>
-    //   <UseContextApp />
-    // </BrowserRouter>
+    <BrowserRouter>
+      <UseContextApp />
+    </BrowserRouter>
 
-    <ZustandApp />
+    // <ZustandApp />
   );
 };
 
